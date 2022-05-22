@@ -1,0 +1,111 @@
+<div class="arquivos-container">
+
+<mat-card-content>
+  <mat-card>
+    <mat-card-title>Cadastro de Arquivos</mat-card-title>
+    <mat-card-subtitle>Contabilidade</mat-card-subtitle>
+  </mat-card>
+</mat-card-content>
+
+<!-- 1º linha -->
+<mat-card-content>
+  <mat-card>
+    <mat-card-subtitle>Informações de ID e Data* | Cadastro Data inicial e final</mat-card-subtitle>
+<mat-form-field class="id-full-width"appearance="fill">
+<mat-label>ID:</mat-label>
+  <input matInput disabled placeholder="Número ID">
+</mat-form-field>
+
+<mat-form-field class="dtinclusao-full-width" appearance="fill">
+    <mat-label>Data Inclusão:</mat-label>
+      <input matInput disabled placeholder="Data inclusão">
+</mat-form-field>
+
+
+    <!-- Data inicial -->
+<mat-form-field class="dtinicial-full-width">
+  <input matInput [matDatepicker]="dtInicial">
+    <mat-label>Período Inicial:</mat-label>
+    <mat-datepicker-toggle [for]="dtInicial" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #dtInicial></mat-datepicker>
+</mat-form-field>
+
+<!-- Data final -->
+<mat-form-field class="dtfinal-full-width">
+  <input matInput [matDatepicker]="dtFinal">
+    <mat-label>Período Final:</mat-label>
+    <mat-datepicker-toggle [for]="dtFinal" matSuffix></mat-datepicker-toggle>
+    <mat-datepicker #dtFinal></mat-datepicker>
+</mat-form-field>
+</mat-card>
+</mat-card-content>
+
+
+</div>
+  <!-- 2º linha -->
+<mat-card-content>
+  <mat-card>
+    <mat-card-subtitle>Cadastro Endereço | Filiais e Documentos. </mat-card-subtitle>
+<p>
+  <mat-form-field class="endereco-full-width" appearance="fill">
+    <mat-label>Endereço</mat-label>
+    <input matInput placeholder="Ex. A.01.001"/>
+  </mat-form-field>
+
+  <mat-form-field class="filial-full-width" appearance="fill">
+    <mat-label>Filiais</mat-label>
+    <input matInput placeholder="Ex. 01-06-07"/>
+  </mat-form-field>
+</p>
+
+<!-- 3º Linha -->
+<p>
+  <mat-form-field class="doc1-full-width" appearance="fill">
+    <mat-label>Documentos 01</mat-label>
+    <textarea matInput placeholder="Ex. Documentos"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="doc2-full-width" appearance="fill">
+    <mat-label>Documentos 02</mat-label>
+    <textarea matInput placeholder="Ex. Documentos"></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="doc3-full-width" appearance="fill">
+    <mat-label>Documentos 03</mat-label>
+    <textarea matInput placeholder="Ex. Documentos"></textarea>
+  </mat-form-field>
+</p>
+</mat-card>
+</mat-card-content>
+
+
+
+
+
+
+<!-- Botão -->
+<div>
+<mat-card-content>
+  <mat-card>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Salvar</button>
+      <button mat-raised-button color="primary">Limpar</button>
+    </mat-card-actions>
+  </mat-card>
+</mat-card-content>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

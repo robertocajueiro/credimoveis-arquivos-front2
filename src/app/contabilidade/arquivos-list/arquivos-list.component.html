@@ -1,0 +1,49 @@
+<mat-card>
+
+  <mat-toolbar color="primary">
+    <span>Arquivos Cadastrado</span>
+  </mat-toolbar>
+
+<table mat-table [dataSource]="arquivos" class="mat-elevation-z8">
+
+  <!-- Periodo_ini Column -->
+  <ng-container matColumnDef="periodo_ini">
+    <th mat-header-cell *matHeaderCellDef> Inicio </th>
+    <td mat-cell *matCellDef="let arquivo"> {{arquivo.periodo_ini}} </td>
+  </ng-container>
+
+  <!-- Periodo_fim Column -->
+  <ng-container matColumnDef="periodo_fim">
+    <th mat-header-cell *matHeaderCellDef> Fim </th>
+    <td mat-cell *matCellDef="let arquivo"> {{arquivo.periodo_fim}} </td>
+  </ng-container>
+
+  <!-- endereco Column -->
+  <ng-container matColumnDef="endereco">
+    <th mat-header-cell *matHeaderCellDef> Endereço </th>
+    <td mat-cell *matCellDef="let arquivo"> {{arquivo.endereco}} </td>
+  </ng-container>
+
+  <!-- dec_01 Column -->
+  <ng-container matColumnDef="doc_01">
+    <th mat-header-cell *matHeaderCellDef> Doc 01 </th>
+    <td mat-cell *matCellDef="let arquivo"> {{arquivo.doc_01}} </td>
+  </ng-container>
+
+  <!-- dec_02 Column -->
+  <ng-container matColumnDef="doc_02">
+    <th mat-header-cell *matHeaderCellDef> Doc 02 </th>
+    <td mat-cell *matCellDef="let arquivo"> {{arquivo.doc_02}} </td>
+  </ng-container>
+
+  <!-- dec_03 Column -->
+  <ng-container matColumnDef="doc_03">
+    <th mat-header-cell *matHeaderCellDef> Doc 03 </th>
+    <td mat-cell *matCellDef="let arquivo"> {{arquivo.doc_03}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+</mat-card>
